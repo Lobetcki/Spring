@@ -8,12 +8,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="customCar"
-          class="org.example.Car">
-    </bean>
-
-    <bean id="customPerson"
-          class="org.example.Person">
-        <property name="car" ref="customCar"/>
+          class="org.example.Car"
+          scope="prototype"
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 
 </beans>
