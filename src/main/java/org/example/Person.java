@@ -1,11 +1,12 @@
 package org.example;
 
+
 public class Person {
 
-    private Car car;
+    private Transport transport;
 
-    public void setCar(Car car) {
-        this.car = car;
+    public void setCar(Transport transport) {
+        this.transport = transport;
     }
 
     public void jumpedInCar(Car car) {
