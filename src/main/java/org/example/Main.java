@@ -9,10 +9,29 @@ public class Main {
         ClassPathXmlApplicationContext context3 =
                 new ClassPathXmlApplicationContext("applicationContext3.xml");
 
-        Moto moto = context3.getBean("moto", Moto.class);
-        moto.go();
-        context3.close();
+//        Moto moto = context3.getBean("moto", Moto.class);
+//        moto.go();
 
+        Person person = context3.getBean("person", Person.class);
+        person.jumpedInCar();
+
+
+        Car car1 = context3.getBean("car", Car.class);
+        Car car2 = context3.getBean("car", Car.class);
+
+        System.out.println(car1 == car2);
+        System.out.println(car1);
+        System.out.println(car2);
+
+
+        Moto moto1 = context3.getBean("moto", Moto.class);
+        Moto moto2 = context3.getBean("moto", Moto.class);
+
+        System.out.println(moto1 == moto2);
+        System.out.println(moto1);
+        System.out.println(moto2);
+//
+        context3.close();
 
 //        ClassPathXmlApplicationContext context1 =
 //                new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -30,14 +49,6 @@ public class Main {
 //
 //        System.out.println();
 //
-//        Car car2 = context2.getBean("customCar", Car.class);
-//        Car car3 = context2.getBean("customCar", Car.class);
-//
-//        System.out.println(car2 == car3);
-//        System.out.println(car2);
-//        System.out.println(car3);
-//
-//        context2.close();
 //
 //        System.out.println();
 //
